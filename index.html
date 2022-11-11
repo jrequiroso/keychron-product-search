@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tool to help you search for the right Keychron Keyboard.">
+
+    <title>Keychron Keyboard Product Search</title>
+
+    <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/0059/0630/1017/files/Keychron_logo_1_32x32.png?v=1614483254" type="image/png" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body id="app" v-cloak>
+    <div class="sidebar">
+
+        <div class="filters">
+            
+            <div class="filter-group">
+
+                <div class="filter-title">Size</div>
+    
+                <div class="filter-choices">
+                    <template v-for="(size, i) in sizes">
+                        <label class="filter-choice"
+                            :for="size.code"
+                            :key="i"
+                            v-if="(productsWithFilter('size', size.name) > 0)">
+                            <input type="checkbox" :name="size.code" :id="size.code" :value="size.name.toLowerCase()" v-model="selected_sizes"> {{ size.name }} ({{ productsWithFilter('size', size.name) }})
+                        </label>
+                    </template >
+                </div>
+                
+            </div>
+            
+            <div class="filter-group">
+                <div class="filter-title">Others</div>
+    
+                <div class="filter-choices">
+                    <label class="filter-choice" for="low_profile" v-if="productsWithFilter('slim', 'Y') > 0">
+                        <input type="checkbox" name="low_profile" id="low_profile" v-model="is_slim"> Low Profile ({{ productsWithFilter('slim', 'Y') }})
+                    </label>
+    
+                    <label class="filter-choice" for="connectivity_wireless" v-if="productsWithFilter('wireless', 'Y') > 0">
+                        <input type="checkbox" name="connectivity_wireless" id="connectivity_wireless" v-model="is_wireless"> Wireless ({{ productsWithFilter('wireless', 'Y') }})
+                    </label>
+    
+                    <label class="filter-choice" for="layout_exploded" v-if="productsWithFilter('exploded', 'Y') > 0">
+                        <input type="checkbox" name="layout_exploded" id="layout_exploded" v-model="is_exploded"> Exploded ({{ productsWithFilter('exploded', 'Y') }})
+                    </label>
+    
+                    <label class="filter-choice" for="hotswap" v-if="productsWithFilter('hotswap', 'Y') > 0">
+                        <input type="checkbox" name="hotswap" id="hotswap" v-model="is_hotswap"> Hotswappable ({{ productsWithFilter('hotswap', 'Y') }})
+                    </label>
+    
+                    <label class="filter-choice" for="qmk_via" v-if="productsWithFilter('qmkVia', 'Y') > 0">
+                        <input type="checkbox" name="qmk_via" id="qmk_via" v-model="is_qmk_via"> QMK / Via compatible ({{ productsWithFilter('qmkVia', 'Y') }})
+                    </label>
+                </div>
+    
+            </div>
+            
+            <div class="filter-group" v-if="layouts_exist">
+                <div class="filter-title">Layout</div>
+    
+                <div class="filter-choices">
+                    <template v-for="(layout, i) in layouts">
+                        <label class="filter-choice"
+                            :for="layout.code"
+                            :key="i"
+                            v-if="(productsWithFilter('layout', layout.name) > 0)">
+                            <input type="checkbox" :name="layout.code" :id="layout.code" :value="layout.name.toLowerCase()" v-model="selected_layouts"> {{ layout.name }} ({{ productsWithFilter('layout', layout.name) }})
+                        </label>
+                    </template>
+    
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            <p>Trademark, Images and logo belongs to Keychron &copy;, All rights reserved.</p>
+            <p>Developed by <a href="https://twitter.com/johnrequiroso">@johnrequiroso</a></p>
+        </div>
+    </div>
+
+    <div class="contents">
+
+        <header>
+            <img src="images/keychron-logo.png" height="50" alt=""> 
+            <h1> Keyboard Product Search</h1>
+        </header>
+
+        <div class="results-container">
+
+            <div class="search-bar">
+                <input class="search-input" type="text" name="keyword" id="search_keyword" placeholder="Search" v-model="search_keyword"/>
+                
+                <span class="results-count">{{ filtered_products.length }} Results</span>
+            </div>
+            
+            <TransitionGroup name="list" tag="div" class="results" v-if="filtered_products.length > 0">
+                
+                <div class="result"
+                    v-for="(product,i) in filtered_products"
+                    :key="i"
+                    @click="goToProductPage(product.productLink)">
+
+                    <div class="image"
+                        :style="{ 'background-image': 'url(images/' + product.imageLink + ')' }"></div>
+                    <div class="name">{{ product.name }}</div>
+                    
+                </div>
+
+            </TransitionGroup>
+
+            <div v-else class="no-results">
+                <div class="no-results-text">
+                    <span class="main">Whoops, seems like we ran out of keyboards for you.</span>
+                    <span class="sub">Want to try resetting your search?</span>
+                </div>
+
+                <button class="button reset-button" type="button" @click="resetFilters">RESET FILTERS</button>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="products.json"></script>
+
+    <script type="module" src="script.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</body>
+</html>
