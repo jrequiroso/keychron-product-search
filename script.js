@@ -14,6 +14,7 @@ createApp({
             is_slim: false,
             is_exploded: false,
             is_qmk_via: false,
+            has_rgb: false,
 
             size_collapsed: false,
             others_collapsed: false,
@@ -110,7 +111,7 @@ createApp({
 
             if (self.is_hotswap) {
                 filtered_products = filtered_products.filter((product) => {
-                    return product.hotswap == "Y";
+                    return ["Y", "Optional"].includes(product.hotswap);
                 })
             }
 
