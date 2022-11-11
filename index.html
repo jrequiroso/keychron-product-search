@@ -17,145 +17,140 @@
         }
     </style>
 </head>
-<body id="app" v-cloak>
-    <div class="sidebar" :class="{ collapsed: sidebar_collapsed }">
+<body>
+    <div id="app" v-cloak>
 
-        <button type="button" class="button sidebar-button"
-            @click="sidebar_collapsed = !sidebar_collapsed">
-        </button>
+        <div class="sidebar" :class="{ collapsed: sidebar_collapsed }" v-cloak>
 
-        <div class="filters">
-            
-            <div class="filter-group">
+            <button type="button" class="button sidebar-button"
+                @click="sidebar_collapsed = !sidebar_collapsed">
+            </button>
 
-                <div class="filter-title" @click="size_collapsed = !size_collapsed">
-                    <span>{{ size_collapsed ? '➕' : '➖'}}</span>
-                    <span>Size</span>
-                </div>
-    
-                <div class="filter-choices" :class="{ collapsed: size_collapsed }">
-                    <template v-for="(size, i) in sizes">
-                        <label class="filter-choice"
-                            :for="size.code"
-                            :key="i"
-                            v-if="(productsWithFilter('size', size.name) > 0)">
-                            <input type="checkbox" :name="size.code" :id="size.code" :value="size.name.toLowerCase()" v-model="selected_sizes"> {{ size.name }} ({{ productsWithFilter('size', size.name) }})
-                        </label>
-                    </template >
-                </div>
+            <div class="filters">
                 
-            </div>
-            
-            <div class="filter-group">
-                <div class="filter-title" @click="others_collapsed = !others_collapsed">
-                    <span>{{ others_collapsed ? '➕' : '➖'}}</span>
-                    <span>Others</span>
-                </div>
-    
-                <div class="filter-choices" :class="{ collapsed: others_collapsed }">
-                    <label class="filter-choice" for="low_profile" v-if="productsWithFilter('slim', 'Y') > 0">
-                        <input type="checkbox" name="low_profile" id="low_profile" v-model="is_slim"> Low Profile ({{ productsWithFilter('slim', 'Y') }})
-                    </label>
-    
-                    <label class="filter-choice" for="connectivity_wireless" v-if="productsWithFilter('wireless', 'Y') > 0">
-                        <input type="checkbox" name="connectivity_wireless" id="connectivity_wireless" v-model="is_wireless"> Wireless ({{ productsWithFilter('wireless', 'Y') }})
-                    </label>
-    
-                    <label class="filter-choice" for="layout_exploded" v-if="productsWithFilter('exploded', 'Y') > 0">
-                        <input type="checkbox" name="layout_exploded" id="layout_exploded" v-model="is_exploded"> Exploded ({{ productsWithFilter('exploded', 'Y') }})
-                    </label>
-    
-                    <label class="filter-choice" for="hotswap" v-if="productsWithFilter('hotswap', 'Y') > 0">
-                        <input type="checkbox" name="hotswap" id="hotswap" v-model="is_hotswap"> Hotswappable ({{ productsWithFilter('hotswap', 'Y') }})
-                    </label>
-    
-                    <label class="filter-choice" for="qmk_via" v-if="productsWithFilter('qmkVia', 'Y') > 0">
-                        <input type="checkbox" name="qmk_via" id="qmk_via" v-model="is_qmk_via"> QMK / Via compatible ({{ productsWithFilter('qmkVia', 'Y') }})
-                    </label>
-                </div>
-    
-            </div>
-            
-            <div class="filter-group" v-if="layouts_exist">
-                <div class="filter-title" @click="layouts_collapsed = !layouts_collapsed">
-                    <span>{{ layouts_collapsed ? '➕' : '➖'}}</span>
-                    <span>Layout</span>
-                </div>
-    
-                <div class="filter-choices" :class="{ collapsed: layouts_collapsed }">
-                    <template v-for="(layout, i) in layouts">
-                        <label class="filter-choice"
-                            :for="layout.code"
-                            :key="i"
-                            v-if="(productsWithFilter('layout', layout.name) > 0)">
-                            <input type="checkbox" :name="layout.code" :id="layout.code" :value="layout.name.toLowerCase()" v-model="selected_layouts"> {{ layout.name }} ({{ productsWithFilter('layout', layout.name) }})
-                        </label>
-                    </template>
-    
-                </div>
-            </div>
+                <div class="filter-group">
 
-        </div>
-
-
-        <div class="footer">
-            <p>Trademark, Images and logo belongs to Keychron &copy;, All rights reserved.</p>
-            <p>Developed by <a href="https://twitter.com/johnrequiroso">@johnrequiroso</a></p>
-        </div>
-    </div>
-
-    <div class="contents">
-
-        <header>
-            <img src="images/keychron-logo.png" height="50" alt=""> 
-            <h1> Keyboard Product Search</h1>
-        </header>
-
-        <div class="results-container">
-
-            <div class="search-bar">
-                <input class="search-input" type="text" name="keyword" id="search_keyword" placeholder="Search" v-model="search_keyword"/>
-                
-                <span class="results-count">{{ filtered_products.length }} Results</span>
-            </div>
-            
-            <TransitionGroup name="list" tag="div" class="results" v-if="filtered_products.length > 0">
-                
-                <div class="result"
-                    v-for="(product,i) in filtered_products"
-                    :key="i"
-                    @click="goToProductPage(product.productLink)">
-
-                    <div class="image"
-                        :style="{ 'background-image': 'url(images/' + product.imageLink + ')' }"></div>
-                    <div class="name">{{ product.name }}</div>
+                    <div class="filter-title" @click="size_collapsed = !size_collapsed">
+                        <span>{{ size_collapsed ? '➕' : '➖'}}</span>
+                        <span>Size</span>
+                    </div>
+        
+                    <div class="filter-choices" :class="{ collapsed: size_collapsed }">
+                        <template v-for="(size, i) in sizes">
+                            <label class="filter-choice"
+                                :for="size.code"
+                                :key="i"
+                                v-if="(productsWithFilter('size', size.name) > 0)">
+                                <input type="checkbox" :name="size.code" :id="size.code" :value="size.name.toLowerCase()" v-model="selected_sizes"> {{ size.name }} ({{ productsWithFilter('size', size.name) }})
+                            </label>
+                        </template >
+                    </div>
                     
                 </div>
-
-            </TransitionGroup>
-
-            <div v-else class="no-results">
-                <div class="no-results-text">
-                    <span class="main">Whoops, seems like we ran out of keyboards for you.</span>
-                    <span class="sub">Want to try resetting your search?</span>
+                
+                <div class="filter-group">
+                    <div class="filter-title" @click="others_collapsed = !others_collapsed">
+                        <span>{{ others_collapsed ? '➕' : '➖'}}</span>
+                        <span>Others</span>
+                    </div>
+        
+                    <div class="filter-choices" :class="{ collapsed: others_collapsed }">
+                        <label class="filter-choice" for="low_profile" v-if="productsWithFilter('slim', 'Y') > 0">
+                            <input type="checkbox" name="low_profile" id="low_profile" v-model="is_slim"> Low Profile ({{ productsWithFilter('slim', 'Y') }})
+                        </label>
+        
+                        <label class="filter-choice" for="connectivity_wireless" v-if="productsWithFilter('wireless', 'Y') > 0">
+                            <input type="checkbox" name="connectivity_wireless" id="connectivity_wireless" v-model="is_wireless"> Wireless ({{ productsWithFilter('wireless', 'Y') }})
+                        </label>
+        
+                        <label class="filter-choice" for="layout_exploded" v-if="productsWithFilter('exploded', 'Y') > 0">
+                            <input type="checkbox" name="layout_exploded" id="layout_exploded" v-model="is_exploded"> Exploded ({{ productsWithFilter('exploded', 'Y') }})
+                        </label>
+        
+                        <label class="filter-choice" for="hotswap" v-if="productsWithFilter('hotswap', 'Y') > 0">
+                            <input type="checkbox" name="hotswap" id="hotswap" v-model="is_hotswap"> Hotswappable ({{ productsWithFilter('hotswap', 'Y') }})
+                        </label>
+        
+                        <label class="filter-choice" for="qmk_via" v-if="productsWithFilter('qmkVia', 'Y') > 0">
+                            <input type="checkbox" name="qmk_via" id="qmk_via" v-model="is_qmk_via"> QMK / Via compatible ({{ productsWithFilter('qmkVia', 'Y') }})
+                        </label>
+                    </div>
+        
+                </div>
+                
+                <div class="filter-group" v-if="layouts_exist">
+                    <div class="filter-title" @click="layouts_collapsed = !layouts_collapsed">
+                        <span>{{ layouts_collapsed ? '➕' : '➖'}}</span>
+                        <span>Layout</span>
+                    </div>
+        
+                    <div class="filter-choices" :class="{ collapsed: layouts_collapsed }">
+                        <template v-for="(layout, i) in layouts">
+                            <label class="filter-choice"
+                                :for="layout.code"
+                                :key="i"
+                                v-if="(productsWithFilter('layout', layout.name) > 0)">
+                                <input type="checkbox" :name="layout.code" :id="layout.code" :value="layout.name.toLowerCase()" v-model="selected_layouts"> {{ layout.name }} ({{ productsWithFilter('layout', layout.name) }})
+                            </label>
+                        </template>
+        
+                    </div>
                 </div>
 
-                <button class="button reset-button" type="button" @click="resetFilters">RESET FILTERS</button>
+            </div>
+
+
+            <div class="footer">
+                <p>Trademark, Images and logo belongs to Keychron &copy;, All rights reserved.</p>
+                <p>Developed by <a href="https://twitter.com/johnrequiroso">@johnrequiroso</a></p>
             </div>
         </div>
 
+        <div class="contents" v-cloak>
+
+            <header>
+                <img src="images/keychron-logo.png" height="50" alt=""> 
+                <h1> Keyboard Product Search</h1>
+            </header>
+
+            <div class="results-container">
+
+                <div class="search-bar">
+                    <input class="search-input" type="text" name="keyword" id="search_keyword" placeholder="Search" v-model="search_keyword"/>
+                    
+                    <span class="results-count">{{ filtered_products.length }} Results</span>
+                </div>
+                
+                <div class="results" v-if="filtered_products.length > 0">
+                    
+                    <div class="result"
+                        v-for="(product,i) in filtered_products"
+                        :key="i"
+                        @click="goToProductPage(product.productLink)">
+
+                        <div class="image"
+                            :style="{ 'background-image': 'url(images/' + product.imageLink + ')' }"></div>
+                        <div class="name">{{ product.name }}</div>
+                        
+                    </div>
+
+                </div>
+
+                <div v-else class="no-results">
+                    <div class="no-results-text">
+                        <span class="main">Whoops, seems like we ran out of keyboards for you.</span>
+                        <span class="sub">Want to try resetting your search?</span>
+                    </div>
+
+                    <button class="button reset-button" type="button" @click="resetFilters">RESET FILTERS</button>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-
     
-    <script type="importmap">
-        {
-            "imports": {
-                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
-            }
-        }
-    </script>
-
-    <script type="text/javascript" src="products.json"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script type="module" src="script.js"></script>
     
