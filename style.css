@@ -1,5 +1,4 @@
 body {
-
     padding: 0;
     margin: 0;
 }
@@ -15,7 +14,8 @@ body {
     overflow: hidden;
 }
 .sidebar {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: calc(100% - 24px);
     background: #2e3447;
     position: relative;
@@ -27,9 +27,11 @@ body {
     color: white;
     padding: 24px;
 
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-y: auto;
 
     transition: left 0.5s ease;
+    transition: width 0.5s ease;
 }
 
 .sidebar-button {
@@ -37,8 +39,8 @@ body {
     height: 30px;
     border-radius: 30px;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 15px;
+    top: 20px;
 
     transition: transform  0.5s ease;
 
@@ -49,12 +51,13 @@ body {
 }
 
 .sidebar.collapsed  {
-    position: absolute;
-    left: -300px;
+    /* position: absolute; */
+    /* left: -300px; */
+    width: 10px;
 }
 
 .sidebar.collapsed .sidebar-button {
-    left: 307px;
+    /* left: 307px; */
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -249,12 +252,26 @@ h1 {
 }
 
 
-
 @media screen and (max-width: 1000px) {
+    header h1 {
+        font-size: 18px;
+    }
+    
     .sidebar {
         position: absolute;
         left: 0;
         overflow-y: auto;
+        height: 100%;
+        width: calc(100% - 100px);
+    }
+
+    .search-bar {
+        padding: 0 30px;
+        align-items: center;
+    }
+
+    .search-input {
+        max-width: 200px;
     }
 
     .filter-title {
@@ -263,6 +280,10 @@ h1 {
 
     .filter-choice {
         font-size: 24px;
+    }
+
+    .contents {
+        padding-left: 40px;
     }
 
     .result {

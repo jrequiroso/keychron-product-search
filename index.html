@@ -26,12 +26,15 @@
                 @click="sidebar_collapsed = !sidebar_collapsed">
             </button>
 
-            <div class="filters">
+            <div class="filters" v-if="!sidebar_collapsed">
                 
                 <div class="filter-group">
 
                     <div class="filter-title" @click="size_collapsed = !size_collapsed">
-                        <span>{{ size_collapsed ? '➕' : '➖'}}</span>
+                        <svg width="15px" height="15px" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
+                            <polygon v-if="size_collapsed" transform="rotate(180, 25, 25)" fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
+                            <polygon v-else fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
+                        </svg>
                         <span>Size</span>
                     </div>
         
@@ -50,7 +53,10 @@
                 
                 <div class="filter-group">
                     <div class="filter-title" @click="others_collapsed = !others_collapsed">
-                        <span>{{ others_collapsed ? '➕' : '➖'}}</span>
+                        <svg width="15px" height="15px" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
+                            <polygon v-if="others_collapsed" transform="rotate(180, 25, 25)" fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
+                            <polygon v-else fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
+                        </svg>
                         <span>Others</span>
                     </div>
         
@@ -80,7 +86,10 @@
                 
                 <div class="filter-group" v-if="layouts_exist">
                     <div class="filter-title" @click="layouts_collapsed = !layouts_collapsed">
-                        <span>{{ layouts_collapsed ? '➕' : '➖'}}</span>
+                        <svg width="15px" height="15px" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
+                            <polygon v-if="layouts_collapsed" transform="rotate(180, 25, 25)" fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
+                            <polygon v-else fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
+                        </svg>
                         <span>Layout</span>
                     </div>
         
@@ -100,7 +109,7 @@
             </div>
 
 
-            <div class="footer">
+            <div class="footer"  v-if="!sidebar_collapsed">
                 <p>Trademark, Images and logo belongs to Keychron &copy;, All rights reserved.</p>
                 <p>Developed by <strong>John Requiroso</strong></p>
                 <div class="social-links">

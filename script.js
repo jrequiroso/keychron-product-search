@@ -153,6 +153,13 @@ createApp({
     },
 
     mounted() {
+        
+        let screen_width = window.innerWidth;
+        
+        if (screen_width < 1000) {
+            this.sidebar_collapsed = true;
+        }
+        
         fetch('./products.json')
             .then((response) => response.json())
             .then((json) => this.products = json);
