@@ -139,7 +139,7 @@
         "caseMaterial": "Aluminum",
         "qmkVia": "Y",
         "imageLink": "q2-iso.png",
-        "productLink": "https://www.keychron.com/collections/keychron-uk-iso-keyboards/products/keychron-q2-qmk-custom-mechanical-keyboard#"
+        "productLink": "https://www.keychron.com/products/keychron-q2-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40312074305625"
     },
     {
         "name": "Keychron Q2 | ISO-DE",
@@ -151,7 +151,7 @@
         "caseMaterial": "Aluminum",
         "qmkVia": "Y",
         "imageLink": "q2-iso.png",
-        "productLink": "https://www.keychron.com/collections/keychron-german-iso-keyboards/products/keychron-q2-qmk-custom-mechanical-keyboard#"
+        "productLink": "https://www.keychron.com/products/keychron-q2-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40312074207321"
     },
     {
         "name": "Keychron Q2 | ISO-NORDIC",
@@ -163,7 +163,43 @@
         "caseMaterial": "Aluminum",
         "qmkVia": "Y",
         "imageLink": "q2-iso.png",
-        "productLink": "https://www.keychron.com/collections/keychron-nordic-iso-keyboards/products/keychron-q2-qmk-custom-mechanical-keyboard#"
+        "productLink": "https://www.keychron.com/products/keychron-q2-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40312074403929"
+    },
+    {
+        "name": "Keychron Q2 | ISO-ES",
+        "size": "65%",
+        "layout": "ISO-ES",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q2-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q2-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40312074010713"
+    },
+    {
+        "name": "Keychron Q2 | ISO-FR",
+        "size": "65%",
+        "layout": "ISO-FR",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q2-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q2-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40312073912409"
+    },
+    {
+        "name": "Keychron Q2 | ISO-SWISS",
+        "size": "65%",
+        "layout": "ISO-SWISS",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q2-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q2-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40312074109017"
     },
     {
         "name": "Keychron Q3",
@@ -701,6 +737,17 @@
         "productLink": "https://www.keychron.com/products/keychron-v4-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40311040376921"
     },
     {
+        "name": "Keychron V4 | ISO-SWISS",
+        "size": "60%",
+        "layout": "ISO-SWISS",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "ABS Plastic",
+        "qmkVia": "Y",
+        "imageLink": "v4-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-v4-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40320507641945"
+    },
+    {
         "name": "Keychron V5",
         "size": "1800 / 96%",
         "layout": "ANSI",
@@ -721,7 +768,7 @@
         "caseMaterial": "ABS Plastic",
         "qmkVia": "Y",
         "imageLink": "v6.png",
-        "productLink": "https://www.keychron.com/pages/keychron-v6-custom-mechanical-keyboard"
+        "productLink": "https://www.keychron.com/products/keychron-v6-qmk-custom-mechanical-keyboard"
     },
     {
         "name": "Keychron S1",

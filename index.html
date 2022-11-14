@@ -30,7 +30,7 @@
                 
                 <div class="filter-group">
 
-                    <div class="filter-title" @click="size_collapsed = !size_collapsed">
+                    <div class="filter-title disable-highlight" @click="size_collapsed = !size_collapsed">
                         <svg width="15px" height="15px" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
                             <polygon v-if="size_collapsed" transform="rotate(180, 25, 25)" fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
                             <polygon v-else fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
@@ -40,7 +40,7 @@
         
                     <div class="filter-choices" :class="{ collapsed: size_collapsed }">
                         <template v-for="(size, i) in sizes">
-                            <label class="filter-choice"
+                            <label class="filter-choice disable-highlight"
                                 :for="size.code"
                                 :key="i"
                                 v-if="(productsWithFilter('size', size.name) > 0)">
@@ -51,8 +51,8 @@
                     
                 </div>
                 
-                <div class="filter-group">
-                    <div class="filter-title" @click="others_collapsed = !others_collapsed">
+                <div class="filter-group" v-if="!no_others_filtered">
+                    <div class="filter-title disable-highlight" @click="others_collapsed = !others_collapsed">
                         <svg width="15px" height="15px" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
                             <polygon v-if="others_collapsed" transform="rotate(180, 25, 25)" fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
                             <polygon v-else fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
@@ -61,23 +61,23 @@
                     </div>
         
                     <div class="filter-choices" :class="{ collapsed: others_collapsed }">
-                        <label class="filter-choice" for="low_profile" v-if="productsWithFilter('slim', 'Y') > 0">
+                        <label class="filter-choice disable-highlight" for="low_profile" v-if="productsWithFilter('slim', 'Y') > 0">
                             <input type="checkbox" name="low_profile" id="low_profile" v-model="is_slim"> Low Profile ({{ productsWithFilter('slim', 'Y') }})
                         </label>
         
-                        <label class="filter-choice" for="connectivity_wireless" v-if="productsWithFilter('wireless', 'Y') > 0">
+                        <label class="filter-choice disable-highlight" for="connectivity_wireless" v-if="productsWithFilter('wireless', 'Y') > 0">
                             <input type="checkbox" name="connectivity_wireless" id="connectivity_wireless" v-model="is_wireless"> Wireless ({{ productsWithFilter('wireless', 'Y') }})
                         </label>
         
-                        <label class="filter-choice" for="layout_exploded" v-if="productsWithFilter('exploded', 'Y') > 0">
+                        <label class="filter-choice disable-highlight" for="layout_exploded" v-if="productsWithFilter('exploded', 'Y') > 0">
                             <input type="checkbox" name="layout_exploded" id="layout_exploded" v-model="is_exploded"> Exploded ({{ productsWithFilter('exploded', 'Y') }})
                         </label>
         
-                        <label class="filter-choice" for="hotswap" v-if="productsWithFilter('hotswap', 'Y') > 0">
+                        <label class="filter-choice disable-highlight" for="hotswap" v-if="productsWithFilter('hotswap', 'Y') > 0">
                             <input type="checkbox" name="hotswap" id="hotswap" v-model="is_hotswap"> Hotswappable ({{ productsWithFilter('hotswap', 'Y') }})
                         </label>
         
-                        <label class="filter-choice" for="qmk_via" v-if="productsWithFilter('qmkVia', 'Y') > 0">
+                        <label class="filter-choice disable-highlight" for="qmk_via" v-if="productsWithFilter('qmkVia', 'Y') > 0">
                             <input type="checkbox" name="qmk_via" id="qmk_via" v-model="is_qmk_via"> QMK / Via compatible ({{ productsWithFilter('qmkVia', 'Y') }})
                         </label>
                     </div>
@@ -85,7 +85,7 @@
                 </div>
                 
                 <div class="filter-group" v-if="layouts_exist">
-                    <div class="filter-title" @click="layouts_collapsed = !layouts_collapsed">
+                    <div class="filter-title disable-highlight" @click="layouts_collapsed = !layouts_collapsed">
                         <svg width="15px" height="15px" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
                             <polygon v-if="layouts_collapsed" transform="rotate(180, 25, 25)" fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
                             <polygon v-else fill="white" points="5,30.9 8.1,34 24,18.1 39.9,34 43,30.9 24,12"/>
@@ -95,7 +95,7 @@
         
                     <div class="filter-choices" :class="{ collapsed: layouts_collapsed }">
                         <template v-for="(layout, i) in layouts">
-                            <label class="filter-choice"
+                            <label class="filter-choice disable-highlight"
                                 :for="layout.code"
                                 :key="i"
                                 v-if="(productsWithFilter('layout', layout.name) > 0)">

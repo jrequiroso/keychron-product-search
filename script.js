@@ -48,9 +48,9 @@ createApp({
     },
 
     watch: {
-        selected_sizes(new_val) {
+        /* selected_sizes(new_val) {
             console.log("selected_sizes: ", new_val)
-        },
+        }, */
 
         /* is_wireless(new_val) {
             console.log("is_wireless: ", new_val)
@@ -66,6 +66,19 @@ createApp({
             });
             
             return layouts_count;
+        },
+
+        no_others_filtered() {
+            if ((productsWithFilter('slim', 'Y') == 0) &&
+                (productsWithFilter('wireless', 'Y') == 0) &&
+                (productsWithFilter('exploded', 'Y') == 0) &&
+                (productsWithFilter('hotswap', 'Y') == 0) &&
+                (productsWithFilter('qmkVia', 'Y') == 0)) {
+                
+                return true;
+            }
+
+            return false;
         },
 
         filtered_products() {
