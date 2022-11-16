@@ -468,6 +468,72 @@
         "productLink": "https://www.keychron.com/products/keychron-q7-qmk-custom-mechanical-keyboard"
     },
     {
+        "name": "Keychron Q7 | ISO-UK",
+        "size": "70%",
+        "layout": "ISO-UK",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q7-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q7-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40321713242201"
+    },
+    {
+        "name": "Keychron Q7 | ISO-DE",
+        "size": "70%",
+        "layout": "ISO-DE",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q7-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q7-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40321713143897"
+    },
+    {
+        "name": "Keychron Q7 | ISO-NORDIC",
+        "size": "70%",
+        "layout": "ISO-NORDIC",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q7-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q7-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40321713340505"
+    },
+    {
+        "name": "Keychron Q7 | ISO-ES",
+        "size": "70%",
+        "layout": "ISO-ES",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q7-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q7-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40321725202521"
+    },
+    {
+        "name": "Keychron Q7 | ISO-FR",
+        "size": "70%",
+        "layout": "ISO-FR",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q7-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q7-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40321725136985"
+    },
+    {
+        "name": "Keychron Q7 | ISO-SWISS",
+        "size": "70%",
+        "layout": "ISO-SWISS",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q7-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q7-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40321725268057"
+    },
+    {
         "name": "Keychron Q8",
         "size": "Alice 65%",
         "layout": "ANSI",
