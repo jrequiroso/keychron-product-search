@@ -457,6 +457,18 @@
         "productLink": "https://www.keychron.com/products/keychron-q6-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40313282199641"
     },
     {
+        "name": "Keychron Q65",
+        "size": "65%",
+        "layout": "ANSI",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q65.png",
+        "productLink": "https://www.keychron.com/products/keychron-q65-qmk-custom-mechanical-keyboard"
+    },
+    {
         "name": "Keychron Q7",
         "size": "70%",
         "layout": "ANSI",
