@@ -1382,6 +1382,17 @@
         "productLink": "https://www.keychron.com/products/keychron-k10-wireless-mechanical-keyboard"
     },
     {
+        "name": "Keychron K10 | ISO-UK",
+        "size": "Full / 100%",
+        "layout": "ISO-UK",
+        "wireless": "Y",
+        "hotswap": "Y",
+        "rgb": "Optional",
+        "caseMaterial": "ABS Plastic, Aluminum",
+        "imageLink": "k10-iso.png",
+        "productLink": "https://www.keychron.uk/products/keychron-k10-wireless-mechanical-keyboard-uk-iso-layout"
+    },
+    {
         "name": "Keychron K12",
         "size": "60%",
         "layout": "ANSI",
