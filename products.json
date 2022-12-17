@@ -79,7 +79,7 @@
         "caseMaterial": "Aluminum",
         "qmkVia": "Y",
         "imageLink": "q1v2-iso.png",
-        "productLink": "https://www.keychron.com/collections/keychron-uk-iso-keyboards/products/keychron-q1#"
+        "productLink": "https://www.keychron.com/products/keychron-q1-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40343427809369"
     },
     {
         "name": "Keychron Q1v2 | ISO-DE",
@@ -91,7 +91,7 @@
         "caseMaterial": "Aluminum",
         "qmkVia": "Y",
         "imageLink": "q1v2-iso.png",
-        "productLink": "https://www.keychron.com/collections/keychron-german-iso-keyboards/products/keychron-q1"
+        "productLink": "https://www.keychron.com/products/keychron-q1-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40343427743833"
     },
     {
         "name": "Keychron Q1v2 | ISO-NORDIC",
@@ -103,7 +103,43 @@
         "caseMaterial": "Aluminum",
         "qmkVia": "Y",
         "imageLink": "q1v2-iso.png",
-        "productLink": "https://www.keychron.com/collections/keychron-nordic-iso-keyboards/products/keychron-q1"
+        "productLink": "https://www.keychron.com/products/keychron-q1-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40343427874905"
+    },
+    {
+        "name": "Keychron Q1v2 | ISO-ES",
+        "size": "75%",
+        "layout": "ISO-ES",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q1v2-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q1-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40343428005977"
+    },
+    {
+        "name": "Keychron Q1v2 | ISO-FR",
+        "size": "75%",
+        "layout": "ISO-FR",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q1v2-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q1-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40343427940441"
+    },
+    {
+        "name": "Keychron Q1v2 | ISO-SWISS",
+        "size": "75%",
+        "layout": "ISO-SWISS",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q1v2-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q1-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40343428071513"
     },
     {
         "name": "Keychron Q1 | JIS",
@@ -653,6 +689,78 @@
         "productLink": "https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard"
     },
     {
+        "name": "Keychron Q10 | ISO-UK",
+        "size": "Alice 75%",
+        "layout": "ISO-UK",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q10-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40350591909977"
+    },
+    {
+        "name": "Keychron Q10 | ISO-DE",
+        "size": "Alice 75%",
+        "layout": "ISO-DE",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q10-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40350591844441"
+    },
+    {
+        "name": "Keychron Q10 | ISO-NORDIC",
+        "size": "Alice 75%",
+        "layout": "ISO-NORDIC",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q10-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40350592041049"
+    },
+    {
+        "name": "Keychron Q10 | ISO-ES",
+        "size": "Alice 75%",
+        "layout": "ISO-ES",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q10-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40350592106585"
+    },
+    {
+        "name": "Keychron Q10 | ISO-FR",
+        "size": "Alice 75%",
+        "layout": "ISO-FR",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q10-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40350591975513"
+    },
+    {
+        "name": "Keychron Q10 | ISO-SWISS",
+        "size": "Alice 75%",
+        "layout": "ISO-SWISS",
+        "exploded": "Y",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "Aluminum",
+        "qmkVia": "Y",
+        "imageLink": "q10-iso.png",
+        "productLink": "https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard-iso-layout-collection?variant=40350592172121"
+    },
+    {
         "name": "Keychron V1",
         "size": "75%",
         "layout": "ANSI",
@@ -847,6 +955,28 @@
         "qmkVia": "Y",
         "imageLink": "v6.png",
         "productLink": "https://www.keychron.com/products/keychron-v6-qmk-custom-mechanical-keyboard"
+    },
+    {
+        "name": "Keychron V7",
+        "size": "70%",
+        "layout": "ANSI",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "ABS Plastic",
+        "qmkVia": "Y",
+        "imageLink": "v7.png",
+        "productLink": "https://www.keychron.com/products/keychron-v7-qmk-custom-mechanical-keyboard"
+    },
+    {
+        "name": "Keychron V10",
+        "size": "Alice 75%",
+        "layout": "ANSI",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "ABS Plastic",
+        "qmkVia": "Y",
+        "imageLink": "v10.png",
+        "productLink": "https://www.keychron.com/products/keychron-v10-alice-layout-qmk-custom-mechanical-keyboard"
     },
     {
         "name": "Keychron S1",

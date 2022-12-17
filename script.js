@@ -69,11 +69,11 @@ createApp({
         },
 
         no_others_filtered() {
-            if ((productsWithFilter('slim', 'Y') == 0) &&
-                (productsWithFilter('wireless', 'Y') == 0) &&
-                (productsWithFilter('exploded', 'Y') == 0) &&
-                (productsWithFilter('hotswap', 'Y') == 0) &&
-                (productsWithFilter('qmkVia', 'Y') == 0)) {
+            if ((this.productsWithFilter('slim', 'Y') == 0) &&
+                (this.productsWithFilter('wireless', 'Y') == 0) &&
+                (this.productsWithFilter('exploded', 'Y') == 0) &&
+                (this.productsWithFilter('hotswap', 'Y') == 0) &&
+                (this.productsWithFilter('qmkVia', 'Y') == 0)) {
                 
                 return true;
             }
