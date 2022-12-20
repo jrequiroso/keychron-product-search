@@ -968,6 +968,17 @@
         "productLink": "https://www.keychron.com/products/keychron-v7-qmk-custom-mechanical-keyboard"
     },
     {
+        "name": "Keychron V8",
+        "size": "Alice 65%",
+        "layout": "ANSI",
+        "hotswap": "Y",
+        "rgb": "Y",
+        "caseMaterial": "ABS Plastic",
+        "qmkVia": "Y",
+        "imageLink": "v8.png",
+        "productLink": "https://www.keychron.com/products/keychron-v8-alice-layout-qmk-custom-mechanical-keyboard"
+    },
+    {
         "name": "Keychron V10",
         "size": "Alice 75%",
         "layout": "ANSI",
