@@ -22,10 +22,12 @@ createApp({
 
             sizes: [
                 { name: 'Full / 100%', code: 'size_100' },
+                { name: 'Southpaw 100%', code: 'size_100_southpaw' },
                 { name: '1800 / 96%', code: 'size_96' },
                 { name: 'TKL / 80%', code: 'size_80' },
                 { name: '75%', code: 'size_75' },
                 { name: 'Alice 75%', code: 'size_75_alice' },
+                { name: 'Split 75%', code: 'size_75_split' },
                 { name: '70%', code: 'size_70' },
                 { name: '65%', code: 'size_65' },
                 { name: 'Alice 65%', code: 'size_65_alice' },
@@ -100,7 +102,11 @@ createApp({
 
             if (self.selected_layouts.length > 0) {
                 filtered_products = filtered_products.filter((product) => {
-                    return (product.layout !== undefined) && self.selected_layouts.includes(product.layout.toLowerCase());
+                    // array1 should contain array2's elements
+                    return self.selected_layouts.every((val) => product.layout.toLowerCase().includes(val));
+                    
+                    /* return (product.layout !== undefined) && 
+                        self.selected_layouts.includes(product.layout.toLowerCase()); */
                 })
             }
 
@@ -141,10 +147,14 @@ createApp({
     methods: {
         productsWithFilter(filter_name, value) {
             let count = this.filtered_products.filter((product) => {
-                // console.log("product[filter_name]: ", product[filter_name])
-                // console.log("value: ", value)
+                
+                /* if (filter_name == 'layouts') {
+                    // return (product[filter_name] !== undefined) && (product[filter_name].toLowerCase().indexOf(value.toLowerCase()) >= 0);
+                    return [];
+                } */
+
                 return (product[filter_name] !== undefined) && (product[filter_name].toLowerCase() == value.toLowerCase());
-            }).length
+            }).length;
 
             return count;
         },
